@@ -18,4 +18,38 @@ angular.module('Website', ['ionic', 'config'])
       StatusBar.styleDefault();
     }
   });
-});
+}).controller('MainCtrl', function ($scope, $ionicModal, $state, $ionicLoading) {
+  $scope.invite = {
+        name:"",
+        email:"",
+        zipcode:""
+  };
+    $ionicModal.fromTemplateUrl('login.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
+    $scope.getInvite = function () {
+      var invite = $scope.invite;
+      if(!invite.email || !invite.email.length){
+        alert("invalid email");
+      }
+      else if(!invite.name || invite.name.trim().length<2){
+        alert("invalid name");
+      }
+      else if(!/(^\d{5}$)/.test(invite.zipcode)){
+        alert("invalid zipcode");
+      }
+      else{
+        var InviteRequest = Parse.Object.extend("InviteRequest");
+        var inviteReq = new InviteRequest();
+        inviteReq.save(invite).then(function(object) {
+          $ionicLoading.show({ template: 'We got your invite request! You will hear from us soon!', duration: 5000 });
+          $scope.modal.hide();
+        });
+      }
+    }
+  });
+
+Parse.initialize("LaxhuAA5aa4vMQ7SfNfDchfXgMETj2xVl3tGoMWC", "ajYR5N3u2d1G4f5bZ52HBJwFCZRyJ4S3CNLAk5Il");

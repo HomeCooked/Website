@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>"Website"</title>
+    <title>HomeCooked</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
 
     <!-- build:css styles/vendor.css -->
     <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
@@ -18,14 +21,237 @@
   </head>
 
   <body ng-app="Website">
-
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
+  <ion-pane ng-controller="MainCtrl">
       <ion-content>
+    <section class="header">
+        <div class="header-left">
+            <span></span>
+        </div>
+        <div class="header-right">
+            <h1 class="title">
+                <img src="img/icon-72.png" alt=""/>
+                <span>HomeCooked</span>
+            </h1>
+            <h2>
+                The best amateur cooks selling
+                <br />
+                delicious dishes on-demand.
+            </h2>
+            <p></p>
+            <div class="download-buttons">
+                <button class="button button-large button-positive" ng-click="modal.show()">Get invite</button>
+            </div>
+            
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section id="first-section">
+        <h2>Coming out soon for the San Francisco Haight!</h2>
+        <div class="box1">
+            <div class="col-1-3 small-feature">
+                <img src="img/calendar.png" alt="" />
+                <h3>On-demand and convenient</h3>
+                <p>
+                    Select and order a meal from nearby cooks, and go pick it up a few minutes later.
+                </p>
+            </div>
+            <div class="col-1-3 small-feature">
+                <img src="img/time.png" alt="" />
+                <h3>Delicious</h3>
+                <p>
+                    Easily find the best amateur chefs in your area, rated by the crowds.
+                </p>
+            </div>
+            <div class="col-1-3 small-feature">
+                <img src="img/users.png" style="height:119px" alt="" />
+                <h3>Affordable</h3>
+                <p>
+                    Rock bottom prices that will make HomeCooked your every-day food app.
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="download-buttons" style="text-align:center;margin-top:40px;">
+            <button class="button button-large button-positive" ng-click="modal.show()">Get invite</button>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <section class="features">
+        <h2>Features</h2>
+        <div class="phone-container">
+            <div class="phone-texts">
+                <h3>An everyday app.</h3>
+                <p>
+                    Quickly join homeCooked to gain access to hundreds of amateur chefs ready to cook on-demand.
+                </p>
+            </div>
+            <div class="phone">
+                <div class="viewport">
+                    <img src="img/create_screen.png" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="divider_90"></div>
+        <div class="phone-container reverse">
+            <div class="phone-texts">
+                <h3>For the food lovers.</h3>
+                <p>
+                    Browse our open and transparent marketplace where thousands of people have rated and reviewed our chefs' inventory.
+                </p>
+            </div>
+            <div class="phone">
+                <div class="viewport">
+                    <img src="img/map_screen.png" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="divider_90"></div>
+        <div class="phone-container">
+            <div class="phone-texts">
+                <h3>Want to cook?</h3>
+                <p>
+                    Define your hours with a simple on/off switch. Our team will also enable you with disposable wares to sell to-go.
+                </p>
+            </div>
+            <div class="phone">
+                <div class="viewport">
+                    <img src="img/map_details_screen.png" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-buttons" style="margin-top:40px;">
+            <button class="button button-large button-positive" ng-click="modal.show()">Get invite</button>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <section class="team">
+        <h2>The Team</h2>
+        <ul>
+            <li>
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/v/t1.0-1/c48.0.160.160/p160x160/553745_10153462137425532_1977765885_n.jpg?oh=9fe0ba912f3bcfa79a84fb2a3814e788&oe=54EDD2FE&__gda__=1423662607_f10f249606151fedd90734003bb87175" alt=""/>
+                <div class="people">
+                    <h4>Marc-Antoine Andreoli</h4>
+                    <p>co-founder</p>
+                    <div class="social">
+                        <ul>
+                            <li class="tw">
+                                <a href="https://twitter.com/DidierBaq" title="twitter" target="_blank">
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li class="github">
+                                <a href="https://github.com/dbaq" title="github" target="_blank">
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/c0.0.160.160/p160x160/1544970_10102958403098372_641760454827621330_n.jpg?oh=3628798cbd6f73e0927ba11bd2641f90&oe=54ECA2FB&__gda__=1423783429_edc10e34b9125ddf0e1263030dd21d73" alt=""/>
+                <div class="people">
+                    <h4>Maximilian Baez</h4>
+                    <p>co-founder</p>
+                    <div class="social">
+                        <ul>
+                            <li class="tw">
+                                <a href="https://twitter.com/DidierBaq" title="twitter" target="_blank">
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li class="github">
+                                <a href="https://github.com/dbaq" title="github" target="_blank">
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c2.0.716.716/s160x160/10514657_10152484248831378_8863187628264200299_n.jpg?oh=a15b1abf8be980996346d0b0adadbdfb&oe=54E437A1&__gda__=1424909599_75ecaab3c054d2caf35a6d5b6b3e3545" alt=""/>
+                <div class="people">
+                    <h4>Valdrin Koshi</h4>
+                    <p>co-founder</p>
+                    <div class="social">
+                        <ul>
+                            <li class="tw">
+                                <a href="https://www.linkedin.com/in/valdrinkoshi" title="linkedin" target="_blank">
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/c16.0.160.160/p160x160/10665701_10203668181479584_4828763465366453839_n.jpg?oh=95134818243ee55e2f14918a546310a1&oe=54F023B9&__gda__=1424868946_fc85c6a92bde5c2c9b04176e364494f1" alt=""/>
+                <div class="people">
+                    <h4>Aurélie Gué</h4>
+                    <p>Graphics Designer</p>
+                    <div class="social">
+                         <ul>
+                            <li class="tw">
+                                <a href="https://twitter.com/MompRachel" title="twitter" target="_blank">
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </section>
+    <section class="footer">
+        <ul>
+            <li>
+                <a href="mailto:marcantoineandreoli@gmail.com" title="Contact">Contact</a>
+            </li>
+            <li>
+                <a href="https://api.HomeCookedapp.com/web/terms/tos" title="ToS">Terms of Service</a>
+            </li>
+            <li>
+                <a href="https://api.HomeCookedapp.com/web/terms/privacy" title="privacy">Privacy Policy</a>
+            </li>
+        </ul>
+    </section>
+
       </ion-content>
-    </ion-pane>
+    </ion-pane> 
+
+<script id="login.html" type="text/ng-template">
+    <ion-modal-view>
+    <ion-header-bar class="bar-light">
+        <h1 class="title">Get Invite!</h1>
+        <div class="buttons">
+            <button class="button button-stable button-clear" ng-click="modal.hide()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content scroll="true">
+        
+            <div class="list list-inset">
+             <p class="padding-bottom">Get an invite by email to use HomeCooked</p>
+              <label class="item item-input">
+                <input type="text" placeholder="Name" ng-model="invite.name" required ng-minlength="2" ng-maxlength="50">
+              </label>
+              <label class="item item-input">
+                <input type="email" placeholder="Email" ng-model="invite.email" required>
+              </label>
+              <label class="item item-input">
+                <input type="number" placeholder="Zipcode" ng-model="invite.zipcode" required ng-minlength="5" ng-maxlength="5">
+              </label>
+              <a href="#" class="button button-positive button-block" ng-click="getInvite()">Submit</a>    
+            </div>
+        
+        
+    </ion-content>
+</ion-modal-view>
+</script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- <script src="vendor/someContribJs.js"></script> -->
