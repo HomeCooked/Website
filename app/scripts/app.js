@@ -37,9 +37,26 @@ angular.module('Website', ['ionic', 'config'])
       });
       var InviteRequest = Parse.Object.extend("InviteRequest");
       var inviteReq = new InviteRequest();
-      inviteReq.save(invite).then(function(object) {
-        $ionicLoading.show({ template: 'We got your invite request! You will hear from us soon!', duration: 5000 });
+      var fnSuccess = function(object) {
+        $ionicLoading.show({ template: 'We got your invite request! You will hear from us soon!', duration: 4000 });
         $scope.modal.hide();
+      };
+      var fnFail = function(){
+        $ionicLoading.show({ template: 'Oups! Something went wrong...please try again', duration: 3000 });
+      }
+      inviteReq.save(invite).then(fnSuccess, function(error){
+        try{
+          var er = JSON.parse(error.message);
+          if(er.status===200){
+            fnSuccess();
+          }
+          else{
+            fnFail();
+          }
+        }
+        catch(e){
+          fnFail();
+        }
       });
     }
   });
