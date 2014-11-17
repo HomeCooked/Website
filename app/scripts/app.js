@@ -32,23 +32,15 @@ angular.module('Website', ['ionic', 'config'])
     });
     $scope.getInvite = function () {
       var invite = $scope.invite;
-      if(!invite.email || !invite.email.length){
-        alert("invalid email");
-      }
-      else if(!invite.name || invite.name.trim().length<2){
-        alert("invalid name");
-      }
-      else if(!/(^\d{5}$)/.test(invite.zipcode)){
-        alert("invalid zipcode");
-      }
-      else{
-        var InviteRequest = Parse.Object.extend("InviteRequest");
-        var inviteReq = new InviteRequest();
-        inviteReq.save(invite).then(function(object) {
-          $ionicLoading.show({ template: 'We got your invite request! You will hear from us soon!', duration: 5000 });
-          $scope.modal.hide();
-        });
-      }
+      $ionicLoading.show({
+        template: 'Sending invite...'
+      });
+      var InviteRequest = Parse.Object.extend("InviteRequest");
+      var inviteReq = new InviteRequest();
+      inviteReq.save(invite).then(function(object) {
+        $ionicLoading.show({ template: 'We got your invite request! You will hear from us soon!', duration: 5000 });
+        $scope.modal.hide();
+      });
     }
   });
 
