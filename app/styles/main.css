@@ -163,6 +163,18 @@ section.header {
 
 
 /* SOCIALS ICONS */
+
+li.linkedin a span {
+  height:40px;
+  width:40px;
+  display: block;
+  background: url(../img/linkedin.png)no-repeat;
+  background-size: 100% auto;
+}
+li.linkedin a span:hover{
+  opacity: 0.9;
+}
+
 li.tw a span {
 	height:40px;
 	width:40px;
