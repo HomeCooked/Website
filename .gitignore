@@ -11,6 +11,6 @@ plugins
 *.log
 *.DS_Store
 .idea/*
-.assets/*
+assets/*
 
 app/scripts/config.js
