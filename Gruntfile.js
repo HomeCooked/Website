@@ -155,7 +155,7 @@ module.exports = function (grunt) {
       }
     },
 
-    
+
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
@@ -218,7 +218,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: 'www',
           src: [
-            '<%= yeoman.images %>/**/*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.images %>/**/*.{png,jpg,jpeg,gif,webp,svg,ico}',
             '*.html',
             'templates/**/*.html',
             'fonts/*'
