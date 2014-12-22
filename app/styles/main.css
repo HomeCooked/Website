@@ -182,6 +182,7 @@ section.header {
   width: 30.8%;
   text-align: center;
 }
+
 .small-feature img {
   margin: 2rem 0;
 }
@@ -392,15 +393,15 @@ li.fb1 a span:hover {
   text-align: center;
 }
 
-.team>ul>li {
+.team > ul > li {
   display: inline-block;
   padding: 12px;
   color: white;
   margin-right: 10px;
   text-align: center;
   vertical-align: top;
-  width:22%;
-  min-width:200px;
+  width: 22%;
+  min-width: 200px;
   color: #444;
 }
 
@@ -439,10 +440,12 @@ li.fb1 a span:hover {
   width: 40px;
   padding: 12px 6px;
 }
-.team .social li:first-child{
+
+.team .social li:first-child {
   padding-left: 0;
 }
-.team .social li:last-child{
+
+.team .social li:last-child {
   padding-right: 0;
 }
 
@@ -785,4 +788,13 @@ li.fb1 a span:hover {
   .small-feature {
     width: 100%;
   }
+}
+
+.invite {
+  bottom: 30%;
+}
+.invite form label,
+.invite form .button{
+  width: 100%;
+  width: calc(100% - 0px);
 }

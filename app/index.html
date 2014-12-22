@@ -11,7 +11,7 @@
   <!-- build:css styles/vendor.css -->
   <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="lib/ionic/release/css/ionic.css"/>
+  <link rel="stylesheet" href="lib/ionic/release/css/ionic.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -237,7 +237,7 @@
 </ion-pane> -->
 
 <script id="login.html" type="text/ng-template">
-  <ion-modal-view>
+  <ion-modal-view class="invite">
     <ion-header-bar class="bar-light">
       <h1 class="title">Get Invite!</h1>
 
@@ -247,7 +247,6 @@
     </ion-header-bar>
     <ion-content scroll="true">
       <form novalidate class="list list-inset" name="form">
-        <p class="padding-bottom">Get an invite by email to use HomeCooked</p>
         <label class="item item-input">
           <input type="text" name="name" placeholder="Name" ng-model="invite.name" required ng-minlength="2"
                  ng-maxlength="50">
