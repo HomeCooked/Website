@@ -182,6 +182,9 @@ section.header {
   width: 30.8%;
   text-align: center;
 }
+.small-feature img {
+  margin: 2rem 0;
+}
 
 .small-feature h3 {
   color: #333;
