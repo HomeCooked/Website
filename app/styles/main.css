@@ -796,5 +796,5 @@ li.fb1 a span:hover {
 .invite form label,
 .invite form .button{
   width: 100%;
-  width: calc(100% - 0px);
+  width: calc(100% - 0.1px);
 }
