@@ -11,7 +11,7 @@
   <!-- build:css styles/vendor.css -->
   <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="lib/ionic/release/css/ionic.css" />
+  <link rel="stylesheet" href="lib/ionic/release/css/ionic.css"/>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -262,26 +262,28 @@
       </div>
     </ion-header-bar>
     <ion-content scroll="true">
-      <form novalidate class="list list-inset" name="form">
-        <label class="item item-input">
-          <input type="text" name="name" placeholder="Name" ng-model="invite.name" required ng-minlength="2"
-                 ng-maxlength="50">
-        </label>
-        <label class="item item-input">
-          <input type="email" name="email" placeholder="Email" ng-model="invite.email" required>
-          <span ng-show="form.email.$dirty && form.email.$invalid">This is not a valid email.</span>
-        </label>
-        <label class="item item-input">
-          <input type="number" name="zipcode" placeholder="Zipcode" ng-model="invite.zipcode" required ng-minlength="5"
-                 ng-maxlength="5">
-          <span ng-show="form.zipcode.$dirty && form.zipcode.$invalid">This is not a valid zipcode.</span>
-        </label>
-        <label class="item item-input">
-          <input type="text" name="phone" placeholder="Phone number" ng-model="invite.phone" ng-minlength="10"
-                 ng-maxlength="20">
-        </label>
-        <a href="#" class="button button-positive button-block" ng-click="getInvite()" ng-disabled="form.$invalid">Submit</a>
-      </form>
+      <label class="item item-input">
+        <input type="text" name="name" placeholder="Name" ng-model="invite.name" required ng-minlength="2"
+               ng-maxlength="50">
+      </label>
+      <label class="item item-input">
+        <input type="email" name="email" placeholder="Email" ng-model="invite.email" required>
+        <span ng-show="form.email.$dirty && form.email.$invalid">This is not a valid email.</span>
+      </label>
+      <label class="item item-input">
+        <input type="number" name="zipcode" placeholder="Zipcode" ng-model="invite.zipcode" required ng-minlength="5"
+               ng-maxlength="5">
+        <span ng-show="form.zipcode.$dirty && form.zipcode.$invalid">This is not a valid zipcode.</span>
+      </label>
+      <label class="item item-input">
+        <input type="text" name="phone" placeholder="Phone number" ng-model="invite.phone" ng-minlength="10"
+               ng-maxlength="20">
+      </label>
+      <label>
+        <ion-toggle ng-model="invite.chef" ng-checked="invite.chef">Apply to become a chef</ion-toggle>
+      </label>
+      <a href="#" class="button button-positive button-block" ng-click="getInvite()"
+         ng-disabled="form.$invalid">Submit</a>
 
 
     </ion-content>

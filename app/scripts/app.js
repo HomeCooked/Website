@@ -22,7 +22,8 @@ angular.module('Website', ['ionic', 'config'])
   $scope.invite = {
         name:"",
         email:"",
-        zipcode:""
+        zipcode:"",
+        chef: false
   };
     $ionicModal.fromTemplateUrl('login.html', {
       scope: $scope,
@@ -37,7 +38,7 @@ angular.module('Website', ['ionic', 'config'])
       });
       var InviteRequest = Parse.Object.extend("InviteRequest");
       var inviteReq = new InviteRequest();
-      var fnSuccess = function(object) {
+      var fnSuccess = function() {
         $ionicLoading.show({ template: 'We got your invite request! You will hear from us soon!', duration: 4000 });
         $scope.modal.hide();
       };
