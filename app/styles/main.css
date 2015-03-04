@@ -789,12 +789,3 @@ li.fb1 a span:hover {
     width: 100%;
   }
 }
-
-.invite {
-  bottom: 30%;
-}
-.invite form label,
-.invite form .button{
-  width: 100%;
-  width: calc(100% - 0.1px);
-}
