@@ -134,22 +134,14 @@ section.header {
 }
 
 .header-right h1 span {
-  font-family: "frankfurter";
-  letter-spacing: 5px;
-  font-size: 300%;
-  color: #14a085;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 28px 0 0 10px;
-
-  text-shadow: -1px 0px 0px #3e4752;
-  -webkit-text-shadow: -1px 0px 0px #3e4752;
-  -moz-text-shadow: -1px 0px 0px #3e4752;
-  -o-text-shadow: -1px 0px 0px #3e4752;
+  position: absolute;
+  opacity: 0;
+  top:-999px;
 }
 
 .header-right h1 img {
   vertical-align: middle;
+  height: 120px;
 }
 
 .header-right h2 {
@@ -166,7 +158,6 @@ section.header {
   font-weight: bold;
   padding: 1.5rem 4rem;
   text-decoration: none;
-  text-shadow: 0px 1px 2px #86ae47;
 }
 
 /*--content--*/
@@ -486,10 +477,6 @@ li.fb1 a span:hover {
     background-size: 100%;
   }
 
-  .header-right h1 span {
-    font-size: 2.4em;
-  }
-
   .header-right h2 {
     font-size: 1.6em;
   }
@@ -528,10 +515,6 @@ li.fb1 a span:hover {
     background-size: 100%;
   }
 
-  .header-right h1 span {
-    font-size: 2.4em;
-  }
-
   .header-right h2 {
     font-size: 1.4em;
   }
@@ -562,10 +545,6 @@ li.fb1 a span:hover {
     width: 280px;
     height: 320px;
     background-size: 100%;
-  }
-
-  .header-right h1 span {
-    font-size: 2.4em;
   }
 
   .header-right h2 {
@@ -650,6 +629,10 @@ li.fb1 a span:hover {
 
   .header-right h1 {
     padding-top: 20px;
+  }
+
+  .header-right h1 img {
+    height: 100px;
   }
 
   .header-left {
