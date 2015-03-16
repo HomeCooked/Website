@@ -465,6 +465,11 @@ li.fb1 a span:hover {
   }
 }
 
+@media (min-width: 650px){
+  .header-right h2 {
+    padding-right: 30px;
+  }
+}
 @media (max-width: 1024px) {
   .header-left span {
     width: 372px;
@@ -766,4 +771,8 @@ li.fb1 a span:hover {
   .small-feature {
     width: 100%;
   }
+}
+
+input, button, select, textarea {
+  font-family: Lato, sans-serif;
 }
