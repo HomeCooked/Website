@@ -55,19 +55,8 @@ body {
   overflow-y: scroll;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:link {
+a, a:hover, a:focus, a:active {
   color: #008dde;
-}
-
-a:visited {
-  color: #0066a1;
-}
-
-a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
@@ -131,7 +120,7 @@ section.header {
 .header-right h1 span {
   position: absolute;
   opacity: 0;
-  top:-999px;
+  top: -999px;
 }
 
 .header-right h1 img {
@@ -148,14 +137,21 @@ section.header {
   line-height: 1.4em;
 }
 
-.download-buttons > button {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 1.5rem 4rem;
+.download-buttons > .button {
+  background-color: #444;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.4rem;
   text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+}
+.download-buttons > .button:first-child {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
-/*--content--*/
+  /*--content--*/
 .box1 {
   margin-top: 5%;
 }
@@ -465,11 +461,12 @@ li.fb1 a span:hover {
   }
 }
 
-@media (min-width: 650px){
+@media (min-width: 650px) {
   .header-right h2 {
     padding-right: 30px;
   }
 }
+
 @media (max-width: 1024px) {
   .header-left span {
     width: 372px;
@@ -538,7 +535,7 @@ li.fb1 a span:hover {
     -moz-background-size: initial !important;
     -o-background-size: initial !important;
     background-size: initial !important;
-    background-position: bottom bottom;
+    background-position: bottom center;
   }
 
   .header-left span {
@@ -575,10 +572,6 @@ li.fb1 a span:hover {
     margin-top: 20px;
     display: block;
     padding-bottom: 20px;
-  }
-
-  .download-buttons a {
-    margin: 10px auto !important;
   }
 
   .features h2 {
