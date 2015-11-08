@@ -778,20 +778,21 @@ input, button, select, textarea {
 
 .btn_appstore, .btn_playstore {
   display: inline-block;
-  width: 170px;
-  height: 50px;
+  width: 167px;
+  height: 49px;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 
 }
 
 .btn_appstore {
-  background: url(../images/btn_appstore_170x50.png) no-repeat;
+  background-image: url(../images/btn_appstore_170x50.png);
 }
 
 .btn_playstore {
-  background: url(../images/btn_playstore_170x50.png) no-repeat;
+  background-image: url(../images/btn_playstore_170x50.png);
 }
