@@ -76,7 +76,6 @@ section h2 {
   font-size: 2.6em;
   text-align: center;
   font-weight: 300;
-  margin-bottom: 10px;
   text-shadow: -1px 0px 0px #868585;
   -webkit-text-shadow: -1px 0px 0px #868585;
   -moz-text-shadow: -1px 0px 0px #868585;
@@ -147,7 +146,7 @@ section.header {
   border-radius: 3px;
 }
 .download-buttons > .button:first-child {
-  margin-right: 1rem;
+  margin-right: 0;
   margin-bottom: 1rem;
 }
 
@@ -571,7 +570,6 @@ li.fb1 a span:hover {
   .download-buttons {
     margin-top: 20px;
     display: block;
-    padding-bottom: 20px;
   }
 
   .features h2 {
@@ -764,8 +762,36 @@ li.fb1 a span:hover {
   .small-feature {
     width: 100%;
   }
+  
+  .download-buttons {
+    padding-bottom: 1rem;
+  }
+  
+  .btn_appstore, .btn_playstore {
+    margin-top: 1rem; 
+  }
 }
 
 input, button, select, textarea {
   font-family: Lato, sans-serif;
+}
+
+.btn_appstore, .btn_playstore {
+  display: inline-block;
+  width: 170px;
+  height: 50px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.btn_appstore {
+  background: url(../images/btn_appstore_170x50.png) no-repeat;
+}
+
+.btn_playstore {
+  background: url(../images/btn_playstore_170x50.png) no-repeat;
 }
