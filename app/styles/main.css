@@ -370,6 +370,7 @@ li.fb1 a span:hover {
 
 /* TEAM */
 .team ul {
+  margin-top: 1rem;
   width: 100%;
   text-align: center;
 }
@@ -762,13 +763,13 @@ li.fb1 a span:hover {
   .small-feature {
     width: 100%;
   }
-  
+
   .download-buttons {
     padding-bottom: 1rem;
   }
-  
+
   .btn_appstore, .btn_playstore {
-    margin-top: 1rem; 
+    margin-top: 1rem;
   }
 }
 
