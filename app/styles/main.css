@@ -119,6 +119,7 @@ section.header {
 .header-right h1 span {
   position: absolute;
   opacity: 0;
+  left: -999px;
   top: -999px;
 }
 
@@ -442,7 +443,7 @@ li.fb1 a span:hover {
   border-top: 1px solid #ccc;
   width: 100%;
   text-align: center;
-  padding: 0;
+  padding: 20px 0;
   margin: 0;
 }
 
@@ -676,10 +677,10 @@ li.fb1 a span:hover {
   .header-right p {
     width: 200px;
     height: 356px;
+    background-image: url(../images/app_device1.png);
     background-size: 100%;
     margin: 0 auto;
     display: block;
-    background: url(../images/app_device1.png);
   }
 
   .col-1-3 {
@@ -749,10 +750,6 @@ li.fb1 a span:hover {
   .header-right p {
     width: 150px;
     height: 267px;
-    background-size: 100%;
-    margin: 0 auto;
-    display: block;
-    background: url(../images/app_device2.png);
   }
 
   .col-1-3 {
